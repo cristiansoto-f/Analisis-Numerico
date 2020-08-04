@@ -186,7 +186,7 @@ plot(xes, fn(xes), type="l", col="red")
 abline(h=0)
 
 #Pruebas
-#Se pueden cambiar las raices encontrar cambiando los puntos iniciales.
+#Se pueden cambiar las raices a encontrar cambiando los puntos iniciales.
 b = (metodo_biseccion(3.2, 5, 0.1^17, 100)) # 3.414213562373098
 n = newton_raphson(4, 0.0000001, 200) #3.414213562373097
 s = metodo_secante(3.1, 3.6, 0.0000001, 200) #3.414213562373095
