@@ -10,7 +10,7 @@ Los algoritmos vienen acompañados de ejemplos de su utilización.
 
 ## Interpolación
 * Polinomio Interpolante de Lagrange
-  - Metodo de Neville
+  - Interpolación iterada de Neville
   - Metodo de Diferencias Divididas
   - Escritura de la forma algebraica en pantalla 
   
@@ -24,5 +24,5 @@ Los algoritmos vienen acompañados de ejemplos de su utilización.
 ## Sistemas de ecuaciones no lineales
 * Método de Newton para sistemas no lineales
 
-# asdasdasd
-* asdasd
+# Simulación
+* Simulación de Monte Carlo
