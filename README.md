@@ -35,3 +35,15 @@ Los algoritmos vienen acompañados de ejemplos de su utilización.
 ## Ecuaciones Diferenciales
 * Metodo de Euler
 * Metodo de Runge-Kutta
+
+## Derivación numérica.
+* Aproximación de la primer derivada.
+  - Diferencia progresiva (h > 0) y regresiva (h < 0)
+  - Fórmula de 3 puntos progresiva y regresiva.
+    - Punto extremo
+    - Punto medio
+  - Fórmula de 5 puntos progresiva y regresiva.
+    - Punto extremo
+    - Punto medio
+* Aproximación de la segunda derivada.
+  - Fórmula de punto medio
