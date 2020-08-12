@@ -24,5 +24,14 @@ Los algoritmos vienen acompañados de ejemplos de su utilización.
 ## Sistemas de ecuaciones no lineales
 * Método de Newton para sistemas no lineales
 
-# Simulación
+## Simulación
 * Simulación de Monte Carlo
+  - Simulación de camino de precios.
+  - Simulación de precios de acciones independientes.
+  - Simulación de precios de acciones correlacionadas.
+  - Resolución de una integral.
+  - Simulación de números aleatorios con distribución compuesta.
+  
+## Ecuaciones Diferenciales
+* Metodo de Euler
+* Metodo de Runge-Kutta
