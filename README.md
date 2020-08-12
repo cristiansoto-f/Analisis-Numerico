@@ -63,3 +63,6 @@ Los algoritmos vienen acompañados de ejemplos de su utilización.
   - Newton-Cotes abierta con n=1
   - Newton-Cotes abierta con n=2
   - Newton-Cotes abierta con n=3
+## Ajustamiento y Suavizado
+  - Mínimos cuadrados
+  - Suavizado por Whittaker Henderson
