@@ -47,3 +47,19 @@ Los algoritmos vienen acompañados de ejemplos de su utilización.
     - Punto medio
 * Aproximación de la segunda derivada.
   - Fórmula de punto medio
+
+## Integración
+* Integración Compuesta
+  - Simpson compuesto (Algoritmo 4.1)
+  - Trapecio compuesto
+  - Punto medio compuesto
+* Fórmulas de Newton-Cotes cerradas.
+  - Trapecio (n = 1)
+  - Simpson (n = 2)
+  - tres octavos de Simpson (n = 3)
+  - Newton-Cotes cerrada con n = 4
+* Fórmulas de Newton-Cotes abiertas.
+  - Fórmula de punto medio
+  - Newton-Cotes abierta con n=1
+  - Newton-Cotes abierta con n=2
+  - Newton-Cotes abierta con n=3
