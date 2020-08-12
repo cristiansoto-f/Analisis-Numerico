@@ -1,6 +1,6 @@
 # Integración numérica con Fórmulas de Newton-Cotes cerradas.
-# Función a integrar.
 
+# Función a integrar.
 fn = function(x){
   val = x*sqrt(x^2 + 9)
   return(val)
