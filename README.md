@@ -17,3 +17,12 @@ Los algoritmos vienen acompañados de ejemplos de su utilización.
 * Cubic Splines
   - Trazador Cúbico Natural
   - Trazador Cúbico Sujeto
+
+## Factorización de Matrices
+* Factorización de Cholesky
+
+## Sistemas de ecuaciones no lineales
+* Método de Newton para sistemas no lineales
+
+# asdasdasd
+* asdasd
