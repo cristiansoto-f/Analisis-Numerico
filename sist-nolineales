@@ -1,0 +1,111 @@
+# Resolución numérica de sistemas no lineales.
+# Algoritmo 10.2
+# Es posible programar el algoritmo para un sistema de 2x2.
+
+norma <- function(y, metodo){
+  if (metodo==2){
+    return(sqrt(sum(y^2)))
+  }
+  if (metodo==Inf){
+    return(max(abs(y)))
+  }
+  return("El metodo debe ser 2 o Inf")
+}
+
+SENoL_Newton <- function(n,x,TOL,N){
+  #Paso 1
+  k <- 1
+  #Paso 2
+  while(k<=N){
+    #Paso 3
+    fx <- Fx(x)
+    J <- Jacobiano(x[1],x[2],x[3])
+    #Paso 4
+    y = solve(J)%*%-fx
+    #Paso 5
+    x <- x + t(y)
+    #Paso 6
+    if (norma(y,2) < TOL){
+      return(x)
+    }
+    #Paso 7
+    k <- k+1
+  }
+  #Paso 8
+  return(paste('Numero maximo de iteraciones excedido'))
+}
+
+# Ejemplo ----
+# Funcion 1 y sus derivadas
+f1 <- function(x1,x2,x3){
+  return(6*x1 - 2*cos(x2*x3) - 1)
+}
+
+df11 <- function(x1,x2,x3){
+  return(6)
+}
+
+df12 <- function(x1,x2,x3){
+  return(2*x3*sin(x2*x3))
+}
+
+df13 <- function(x1,x2,x3){
+  return(2*x2*sin(x2*x3))
+}
+
+# Funcion 2 y sus derivadas
+f2 <- function(x1,x2,x3){
+  return(9*x2 + sqrt(x1^2 + sin(x3) + 1.06) + 0.9)
+}
+
+df21 <- function(x1,x2,x3){
+  return(x1/(sqrt(x1^2 + sin(x3) + 1.06)))
+}
+
+df22 <- function(x1,x2,x3){
+  return(9)
+}
+
+df23 <- function(x1,x2,x3){
+  return(cos(x3)/(2*sqrt(x1^2 + sin(x3) + 1.06)))
+}
+
+# Funcion 3 y sus derivadas
+f3 <- function(x1,x2,x3){
+  return(60*x3 + 3*exp(-x1*x2) + 10*pi - 3)
+}
+
+df31 <- function(x1,x2,x3){
+  return(-3*x2*exp(-x1*x2))
+}
+
+df32 <- function(x1,x2,x3){
+  return(-3*x1*exp(-x1*x2))
+}
+
+df33 <- function(x1,x2,x3){
+  return(60)
+}
+
+Jacobiano <- function(x1,x2,x3){
+  col1 <- c(df11(x1,x2,x3),df12(x1,x2,x3),df13(x1,x2,x3))
+  col2 <- c(df21(x1,x2,x3),df22(x1,x2,x3),df23(x1,x2,x3))
+  col3 <- c(df31(x1,x2,x3),df32(x1,x2,x3),df33(x1,x2,x3))
+  J <- rbind(col1,col2, col3)
+  return(J)
+}
+
+Fx <- function(x){
+  Fx <- rbind(f1(x[1],x[2],x[3]), f2(x[1],x[2],x[3]), f3(x[1],x[2],x[3]))
+  return(Fx)
+}
+
+x <- c(0.1, 0.1, -0.1)
+SENoL_Newton(3, x, 10^-15, 10000)
+
+x1 <- SENoL_Newton(3, x, 10^-6, 100)[1]
+x2 <- SENoL_Newton(3, x, 10^-6, 100)[2]
+x3 <- SENoL_Newton(3, x, 10^-6, 100)[3]
+f1(x1, x2, x3)
+f2(x1, x2, x3)
+f3(x1, x2, x3)
